@@ -1,0 +1,10 @@
+
+<div class="search">
+  <% form_remote_tag :html => { :action =>     url_for(:controller => "some", :action => "place") } do %>
+    <%= label_tag "Country:" %><%= country_select("user", "", {"India", "India"}) %>
+    <%= label_tag "City:" %><%=  text_field_tag "city"%>
+    <%= label_tag "Location:" %><%=  text_field_tag "location"%>
+    <%= label_tag "Category:" %><%= text_field_tag "category" %>
+    <%= submit_tag "Search" %>
+  <%end%>
+</div>

@@ -1,0 +1,28 @@
+/* 
+    Document   : style
+    Created on : Jun 10, 2010, 7:30:55 AM
+    Author     : naresh kapse
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+root { 
+    display: block;
+}
+
+#header{
+    height: 200px;
+    background-color: navy;
+    color: silver;
+}
+#page{
+    height: 300px;
+}
+#footer{
+    position: relative;
+}
