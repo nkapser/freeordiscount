@@ -8,6 +8,13 @@
 </head>
 <body>
   <div id="header">
+    <div class="header_login">
+     <% if current_user.nil? %>
+      <%= link_to "Advertiser Login", login_url %>
+      <% else %>
+      <%= link_to "Logout",  logout_url%>
+      <% end %>
+    </div>
     <h1>Merchandiser place to put their ads</h1>
   </div>
   <div id="page">

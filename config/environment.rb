@@ -16,9 +16,10 @@ Rails::Initializer.run do |config|
 
   # Specify gems that this application depends on and have them installed with rake gems:install
 #  
-  config.gem "rspec", :version => '1.3.0'
-#  config.gem "rspec-rails", :version => '>=1.2.9'
-  
+config.gem "rspec", :lib => false, :version => ">= 1.3.0"
+config.gem "rspec-rails", :lib => false, :version => ">= 1.3.2"
+config.gem "authlogic", :lib => false, :version => ">= 2.1.5"
+
   # config.gem "bj"
   # config.gem "hpricot", :version => '0.6', :source => "http://code.whytheluckystiff.net"
   # config.gem "sqlite3-ruby", :lib => "sqlite3"
