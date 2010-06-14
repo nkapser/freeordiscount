@@ -41,6 +41,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resource :account, :controller => "users"
   map.resources :users
 
+  map.resources :promotions
 
 
   # See how all your routes lay out with "rake routes"

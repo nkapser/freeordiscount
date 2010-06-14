@@ -19,7 +19,7 @@ Rails::Initializer.run do |config|
 config.gem "rspec", :lib => false, :version => ">= 1.3.0"
 config.gem "rspec-rails", :lib => false, :version => ">= 1.3.2"
 config.gem "authlogic", :lib => false, :version => ">= 2.1.5"
-
+#config.gem "rspec_sequel_matchers", :lib => false, :version => ""
   # config.gem "bj"
   # config.gem "hpricot", :version => '0.6', :source => "http://code.whytheluckystiff.net"
   # config.gem "sqlite3-ruby", :lib => "sqlite3"

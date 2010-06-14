@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
     acts_as_authentic
 
-    has_many :promotions
+  has_many :promotions, :dependent => :destroy
 end

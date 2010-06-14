@@ -1,0 +1,23 @@
+
+      <h1>Create Promotion</h1>
+
+<% form_for @promotion, :url => promotions_path do |form| %>
+  <%= form.error_messages %>
+<%= form.label :name %><br />
+<%= form.text_field :name %><br />
+<br />
+<%= form.label :message %><br />
+<%= form.text_field :message %><br />
+<br />
+<%= form.label :description %><br />
+<%= form.text_field :description %><br />
+<br/>
+  <%= form.label "Start Date" %><br />
+<%= form.text_field :start_date %><br />
+<br/>
+  <%= form.label "End Date" %><br />
+<%= form.text_field :end_date %><br />
+
+  <%= form.submit "Create Promotion" %>
+<% end %>
+
