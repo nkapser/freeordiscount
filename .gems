@@ -1,0 +1,3 @@
+rspec --version ">= 1.3.0"
+rspec-rails --version ">= 1.3.2"
+authlogic --version >= 2.1.5"
