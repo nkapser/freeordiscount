@@ -1,0 +1,38 @@
+<html>
+<head>
+  <title>
+
+  </title>
+  <%= stylesheet_link_tag "style"  %>
+  <%= stylesheet_link_tag "jquery-ui-1.8.2.custom"  %>
+  <%= javascript_include_tag 'jQuery/jquery-1.4.2' %>
+  <%= javascript_include_tag 'jQuery/jquery-ui-1.8.2.custom.min' %>
+</head>
+<body>
+  <div id="header">
+    <div class="header_login">
+      <%= link_to "Home", root_path %> |
+     <% if current_user.nil? %>
+      <%= link_to "Advertiser Login", login_path %>
+      <% else %>      
+      <%= link_to "Create Promotion", new_promotion_path %> |
+      <%= link_to "Add Business Unit", new_business_unit_path %> |
+      <%= link_to "Logout",  logout_url %>
+      <% end %>
+    </div>
+    <h1>Merchandiser place to put their ads</h1>
+  </div>
+  <div id="page">
+    <%= yield %>
+  </div>
+  <div id="footer">
+    <%= link_to "About Us" %> | <%= link_to "Contact Us" %>
+    <script type="text/javascript">
+	$(function() {
+		$(".datepicker").datepicker();
+	});
+    </script>
+
+  </div>
+</body>
+</html>

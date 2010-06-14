@@ -16,11 +16,11 @@ root {
 }
 
 #header{
-    height: 200px;
+    height: 100px;
     color: silver;
 }
 #page{
-    height: 300px;
+    margin: 20px 0px 20px 0px;
 }
 #footer{
     position: relative;

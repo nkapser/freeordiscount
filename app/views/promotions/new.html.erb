@@ -13,10 +13,10 @@
 <%= form.text_field :description %><br />
 <br/>
   <%= form.label "Start Date" %><br />
-<%= form.text_field :start_date %><br />
+<%= form.text_field :start_date, :class => "datepicker" %><br />
 <br/>
   <%= form.label "End Date" %><br />
-<%= form.text_field :end_date %><br />
+<%= form.text_field :end_date, :class => "datepicker"  %><br />
 
   <%= form.submit "Create Promotion" %>
 <% end %>

@@ -42,6 +42,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :users
 
   map.resources :promotions
+  map.resources :business_units
 
 
   # See how all your routes lay out with "rake routes"
