@@ -6,6 +6,7 @@ class PromotionsController <  ApplicationController
 
     def new
       @promotion = Promotion.new
+      @businesses = BusinessUnit.find(:all)
     end
 
     def create

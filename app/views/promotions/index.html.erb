@@ -1,7 +1,10 @@
 <h3>Promotions created:</h3>
 <table border="1">
 <% @promotions.each do |promotion| %>
-  <tr>
+  <tr><td
+      >
+      <%= promotion.business_unit.name %>
+    </td>
     <td>
       <%= promotion.name %>  
     </td>

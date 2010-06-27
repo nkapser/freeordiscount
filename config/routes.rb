@@ -44,6 +44,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :promotions
   map.resources :business_units
 
+  map.search 'search', :controller => "search", :action => "search"
 
   # See how all your routes lay out with "rake routes"
 

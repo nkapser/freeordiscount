@@ -4,7 +4,9 @@
 <% form_for @promotion, :url => promotions_path do |form| %>
   <%= form.error_messages %>
 
-
+      <h5>Select the business unit.</h5>
+      <%= form.select :business_unit_id, @businesses.map {| x | [x.name, x.id] } %>
+      <br/>
 <%= form.label :name %><br />
 <%= form.text_field :name %><br />
 <br />
