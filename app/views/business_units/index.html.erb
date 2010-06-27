@@ -1,6 +1,9 @@
-<%#
-# To change this template, choose Tools | Templates
-# and open the template in the editor.
-%>
-
-<%= "index.html" %>
+<h3>Business Units</h3>
+<div class="business">
+<% @business_units.each do |business| %>
+  <h3><%= business.name %></h3>
+<h4>Categories</h4>
+<% require 'csv' %>
+<%= business.categories.map {|x| x.name}.join(", ")%>
+</div>
+<%  end %>

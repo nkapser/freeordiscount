@@ -1,0 +1,35 @@
+
+<h1>Add BusinessUnit</h1>
+
+<h3>Location</h3>
+<% form_for @business_unit, :url => business_units_path do |form| %>
+  <%= form.error_messages %>
+
+<div class="row">
+    <%= form.label :Name %>
+    <%= form.text_field :name %>
+    </div>
+<div class="row">
+    <%= form.label :Description %>
+    <%= form.text_area :description, :rows => 3 %>
+    </div>
+
+  <% fields_for "business_unit[location_attribs]", @business_unit.location do |lform| %>
+    <%= lform.label :City %>
+    <%= lform.text_field :city %>
+<br />
+    <%= lform.label :Area %>
+    <%= lform.text_field :area %>
+<br />
+  <%end%>
+<br /><br />
+  <%= form.label :Categories %>
+  <% for category in @categories do %>
+      <%= check_box_tag 'business_unit[category_ids][]', category.id%>
+      <%= category.name.humanize %>
+    <% end %>
+
+    <br/>
+    <%= form.submit "Add BusinessUnit" %>
+  <% end %>
+

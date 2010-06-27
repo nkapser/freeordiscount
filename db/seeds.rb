@@ -5,3 +5,6 @@
 #   
 #   cities = City.create([{ :name => 'Chicago' }, { :name => 'Copenhagen' }])
 #   Major.create(:name => 'Daley', :city => cities.first)
+
+
+["Apparels", "Shoes", "Electronics", "Jewelry", "Watches"].each { |category|  Category.find_or_create_by_name({:name => category})}

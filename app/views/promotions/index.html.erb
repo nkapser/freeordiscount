@@ -1,1 +1,19 @@
 <h3>Promotions created:</h3>
+<table border="1">
+<% @promotions.each do |promotion| %>
+  <tr>
+    <td>
+      <%= promotion.name %>  
+    </td>
+    <td>
+      <%= promotion.message %>  
+    </td>
+    <td>
+      <%= promotion.start_date %>  
+    </td>
+    <td>
+      <%= promotion.end_date%>  
+    </td>
+  </tr>
+<%  end %>
+  </table>

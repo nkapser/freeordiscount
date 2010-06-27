@@ -7,6 +7,8 @@ class PromotionSpec
       should validate_presence_of :message
       should validate_presence_of :start_date
       should validate_presence_of :end_date
+
+      
     end
 
    it "should validate the presense of valid fields" do
@@ -40,8 +42,20 @@ class PromotionSpec
       promotion.errors["end_date"].should == "End Date cannot be before Start Date"
     end
 
-    it "should assign mulitple categories" do
+    it "should belongs business unit" do
+     promotion = Promotion.new({
+            :name => "Diwali Discounts 1010",
+            :message => "Bumper discounts from Shoppers Stop",
+            :start_date => Time.now,
+            :end_date => Time.now + 2,
+            :business_unit => BusinessUnit.new(:name => "ShoppersStop")
+        })
 
+      promotion.save
+      promotion.errors.count.should == 0
+
+      promotion.reload
+      promotion.business_unit.name.should == "ShoppersStop"
     end
   end
 end

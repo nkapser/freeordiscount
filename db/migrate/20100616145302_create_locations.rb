@@ -1,8 +1,8 @@
 class CreateLocations < ActiveRecord::Migration
   def self.up
     create_table :locations do |t|
-       t.string :name
-       t.integer :business_unit_id
+        t.string :city
+        t.string :area
     end
   end
 

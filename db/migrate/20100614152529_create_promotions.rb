@@ -6,6 +6,7 @@ class CreatePromotions < ActiveRecord::Migration
       t.string :description
       t.datetime :start_date, :end_date
       t.integer :user_id
+      t.integer :business_unit_id
       t.timestamps
     end
   end
