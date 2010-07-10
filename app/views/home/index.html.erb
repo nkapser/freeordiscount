@@ -1,6 +1,6 @@
 
 <div class="search">
-  <% form_tag :action => 'search', :controller => 'search' do %>
+  <% form_tag  :action => 'search', :controller => 'search' do %>
     <%= label_tag "Country:" %><%= country_select("user", "", {"India", "India"}) %>
     <%= label_tag "City:" %><%=  text_field_tag "city"%>
     <%= label_tag "Location:" %><%=  text_field_tag "location"%>

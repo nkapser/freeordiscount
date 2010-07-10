@@ -1,0 +1,12 @@
+<% form_tag '/user_sessions', :method => :post do |f| %>
+
+  <%= label_tag :email %><br />
+  <%= text_field_tag  :email %><br />
+
+  <%= label_tag :password %><br />
+  <%= password_field_tag :password %><br />
+
+  <%= check_box_tag :remember_me %><%= label_tag :remember_me %><br />
+  <br />
+  <%= submit_tag "Login" %> | New User <%=link_to "Sign Up", new_user_path  %>
+<% end %>

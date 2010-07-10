@@ -10,5 +10,13 @@ class LocationSpec
         should validate_presence_of :city
         should validate_presence_of :area
     end
+
+    it "should fetch all the promotions from that location" do
+      
+
+      location = Location.new
+      results = location.fetch_all_promotions("", "", "")
+      results.count.should == 3
+    end
   end
 end

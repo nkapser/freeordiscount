@@ -26,8 +26,17 @@
     <%= yield %>
   </div>
   <div id="footer">
-    <%= link_to "About Us" %> | <%= link_to "Contact Us" %>
-    <script type="text/javascript">
+    <div class="copyright">
+      &copy; 2010 KriyaMedia
+    </div>
+    <div class="links">
+    <%= link_to "About Us" %> |
+    <%= link_to "Contact Us" %> |
+    <%= link_to "Feedback"%> |
+    <%= link_to "Contact"%> |
+    <%= link_to "Terms of Use"%>
+    </div>
+  <script type="text/javascript">
 	$(function() {
 		$(".datepicker").datepicker();
 	});

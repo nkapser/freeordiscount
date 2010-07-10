@@ -15,13 +15,36 @@ root {
     display: block;
 }
 
+body{
+    margin:0px;
+    
+}
+
 #header{
-    height: 100px;
-    color: silver;
+    height: 150px;
+    background-color:  #cccc66;
 }
 #page{
     margin: 20px 0px 20px 0px;
+    height: auto;
 }
 #footer{
-    position: relative;
+    height: 100px;
+    color: silver;
+    font-weight: bold;
+    border-top: solid #0f0f0f;
+}
+
+#footer .links{
+    margin-top:  10px;
+    margin-right: 10px;
+    float: right;
+}
+
+#footer .copyright{
+    float:left;
+}
+
+#footer a{
+    text-decoration: none;
 }
