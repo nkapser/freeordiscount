@@ -12,11 +12,19 @@ class LocationSpec
     end
 
     it "should fetch all the promotions from that location" do
-      
+      user = User.new(:email => "test@email.com", :password => "asdf123", :password_confirmation => "asdf123")
+      user.save!
 
-      location = Location.new
-      results = location.fetch_all_promotions("", "", "")
-      results.count.should == 3
+      category = Category.create!(:name => "shoes")
+
+      business = BusinessUnit.new(:name => "Shoppers Stop", :description => "Some desc", :location => Location.new(:area => "koramangala", :city => "bangalore"), :categories => [category])
+      user.business_units = [business]
+      user.promotions = [Promotion.new(:name => "Diwali Offer", :message => "40% flat discount on apprels", :business_unit => business, :start_date => Time.now, :end_date => Time.now + 5000)]
+
+      user.save!
+
+      results = Location.fetch_all_promotions("koramangala", "bangalore", "shoes")
+      results.count.should == 1
     end
   end
 end

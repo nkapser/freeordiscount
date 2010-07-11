@@ -9,13 +9,20 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100616171151) do
+ActiveRecord::Schema.define(:version => 20100710103122) do
+
+  create_table "addresses", :force => true do |t|
+    t.string  "address_line1"
+    t.string  "address_line2"
+    t.integer "zipcode"
+  end
 
   create_table "business_units", :force => true do |t|
     t.string  "name"
     t.string  "description"
     t.integer "user_id"
     t.integer "location_id"
+    t.integer "address_id"
   end
 
   create_table "business_units_categories", :id => false, :force => true do |t|

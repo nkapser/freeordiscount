@@ -5,6 +5,7 @@ class CreateBusinessUnits < ActiveRecord::Migration
       t.string :description
       t.integer :user_id
       t.integer :location_id
+      t.integer :address_id
     end
   end
 
