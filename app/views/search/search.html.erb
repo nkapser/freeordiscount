@@ -1,3 +1,7 @@
+
+<% if @results.empty?  %>
+<h3>"No Results found." </h3>
+<%end%>
 <% @results.each do|result | %>
 <h4><%= result.name %> </h4>
 <%end%>

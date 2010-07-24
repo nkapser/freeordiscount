@@ -1,6 +1,7 @@
 class Promotion < ActiveRecord::Base
 
   has_and_belongs_to_many :categories
+  has_many :coupons
   belongs_to :user
 
   validates_presence_of :name, :message, :start_date, :end_date

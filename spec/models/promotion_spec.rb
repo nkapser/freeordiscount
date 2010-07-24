@@ -8,7 +8,7 @@ class PromotionSpec
       should validate_presence_of :start_date
       should validate_presence_of :end_date
 
-      
+      should have_many :coupons
     end
 
    it "should validate the presense of valid fields" do

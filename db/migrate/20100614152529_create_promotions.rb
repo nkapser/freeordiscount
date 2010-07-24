@@ -4,6 +4,7 @@ class CreatePromotions < ActiveRecord::Migration
       t.string :name
       t.string :message
       t.string :description
+      t.string :banner
       t.datetime :start_date, :end_date
       t.integer :user_id
       t.integer :business_unit_id

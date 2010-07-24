@@ -3,6 +3,8 @@ class CreateBusinessUnits < ActiveRecord::Migration
     create_table :business_units do |t|
       t.string :name
       t.string :description
+      t.string :logo
+      t.string :url
       t.integer :user_id
       t.integer :location_id
       t.integer :address_id

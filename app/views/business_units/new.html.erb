@@ -13,6 +13,14 @@
     <%= form.label :Description %>
     <%= form.text_area :description, :rows => 3 %>
     </div>
+<div class="row">
+    <%= form.label :Logo %>
+    <%= form.text_field :logo %>
+    </div>
+<div class="row">
+    <%= form.label :url %>
+    <%= form.text_field :url %>
+    </div>
 
   <% fields_for "business_unit[location_attribs]", @business_unit.location do |lform| %>
     <%= lform.label :City %>
@@ -20,6 +28,14 @@
 <br />
     <%= lform.label :Area %>
     <%= lform.text_field :area %>
+<br />
+<br />
+    <%= lform.label :latitude %>
+    <%= lform.text_field :latitude %>
+<br />
+<br />
+    <%= lform.label :longitude %>
+    <%= lform.text_field :longitude %>
 <br />
   <%end%>
 <br /><br />

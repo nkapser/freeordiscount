@@ -1,9 +1,13 @@
 
       <h1>Create Promotion</h1>
 
+
+      <% if @businesses.empty? %>
+      <h3>You need to add business before you Promote. </h3> <%= link_to "Add a business unit", new_business_unit_path %>
+      <% else %>
+
 <% form_for @promotion, :url => promotions_path do |form| %>
   <%= form.error_messages %>
-
       <h5>Select the business unit.</h5>
       <%= form.select :business_unit_id, @businesses.map {| x | [x.name, x.id] } %>
       <br/>
@@ -16,6 +20,10 @@
 <%= form.label :description %><br />
 <%= form.text_field :description %><br />
 <br/>
+<br />
+<%= form.label :banner %><br />
+<%= form.text_field :banner %><br />
+<br/>
   <%= form.label "Start Date" %><br />
 <%= form.text_field :start_date, :class => "datepicker" %><br />
 <br/>
@@ -25,3 +33,4 @@
   <%= form.submit "Create Promotion" %>
 <% end %>
 
+<%end%>
